@@ -36,7 +36,8 @@ html {
 }
 
 body {
-  font-size: 0.875rem;
+  font-family: 'Crimson Text', serif;
+  font-size: 100%;
   color: black;
   min-height: 100vh;
   position: relative;
