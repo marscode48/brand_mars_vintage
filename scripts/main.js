@@ -1,23 +1,4 @@
 /*=================================================
-jQuery
-===================================================*/
-// $(function() {
-//   // ハンバーガーメニュー
-//   $('.toggle-btn').on('click', function() {
-//     if ($('.header').hasClass('open')) {
-//       $('.header').removeClass('open');
-//     } else {
-//       $('.header').addClass('open');
-//     }
-//   });
-
-//   // 画面をクリックしたら閉じる
-//   $('#mask').on('click', function() {
-//     $('.header').removeClass('open');
-//   });
-// });
-
-/*=================================================
 JavaScript
 ===================================================*/
 const btn = document.querySelector('.toggle-btn');
@@ -33,3 +14,33 @@ btn.addEventListener('click', function() {
 mask.addEventListener('click', function() {
   header.classList.remove('open')
 });
+
+// ここから記述
+document.addEventListener('DOMContentLoaded', function () {
+  const main = new Main();
+});
+
+class Main {
+  constructor() {
+    this._init();
+    // this._scrollInit();
+  }
+
+  _init() {
+    // new MenuOpen();
+    // new SmoothScroll(80);
+    new HeroSlider('.swiper');
+  }
+
+  // _inviewAnimation(el, inview) {
+  //   console.log(el)
+  //   console.log(inview)
+  //   if(inview) {
+  //     el.classList.add('inview');
+  //   }
+  // }
+
+  // _scrollInit() {
+  //   new ScrollObserver('.feature__img', this._inviewAnimation);
+  // }
+}
