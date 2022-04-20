@@ -61,9 +61,7 @@ li {
   list-style: none;
 }
 
-/*
-共通クラス
-*/
+/* 共通クラス */
 .wrapper {
   width: 100%;
   margin: 0 auto;
@@ -86,6 +84,38 @@ li {
   font-size: 0.875rem;
   font-weight: normal;
   margin-bottom: 30px;
+}
+
+/* アイコン */
+.icon {
+  position: relative;
+}
+
+.icon::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 14%;
+  width: 1em;
+  height: 1em;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon.twitter::before {
+  background-image: url(../images/twitter.svg);
+}
+
+.icon.facebook::before {
+  background-image: url(../images/facebook.svg);
+}
+
+.icon.instagram::before {
+  background-image: url(../images/instagram.svg);
 }
 
 /*-------------------------------------------
@@ -442,34 +472,75 @@ COMPANY
 }
 
 /*-------------------------------------------
-フッター
+Footer
 -------------------------------------------*/
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
+  border-top: solid 1px #fff;
+  font-size: 0.75rem;
+  padding: 80px 30px;
+  text-align: left;
 }
 
-.footer__menu {
+.footer__logo {
+  margin-bottom: 15px;
+}
+
+.footer__logo a {
+  display: block;
+  height: 30px;
+}
+
+.footer__logo a img {
+  width: 30px;
+}
+
+.footer__logo a span {
+  font-size: 1.25rem;
+  line-height: 30px;
+}
+
+.footer__ask p {
+  line-height: 1.6;
+}
+
+.footer__sns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
 }
 
-.footer__menu li {
-  font-size: 0.75rem;
-  margin-right: 30px;
+.footer__sns li a {
+  padding: 0 15px;
+}
+
+.footer__sns .icon::before {
+  left: 0;
 }
 
 .footer__copyright {
-  font-size: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__copyright li:last-child {
+  margin-left: 15px;
 }
 
 @media (max-width: 900px) {
