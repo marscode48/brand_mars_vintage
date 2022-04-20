@@ -276,6 +276,70 @@ Pickup
 }
 
 /*-------------------------------------------
+Feature
+-------------------------------------------*/
+.feature {
+  max-width: 1240px;
+  padding: 100px 16px 50px 16px;
+  margin: -50px auto 10px auto;
+}
+
+.feature__grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 26px;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.feature__item {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 0 0 8px 4px #ccc;
+          box-shadow: 0 0 8px 4px #ccc;
+}
+
+.feature__img {
+  vertical-align: top;
+  /* 
+    jQueryでフェード表示させる時はコメントアウトする 
+    */
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  /*
+    scroll.jsでフェード表示させる要素に使用するためのクラス
+    */
+}
+
+.feature__img.inview {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.feature__content {
+  padding: 30px;
+}
+
+.feature__category {
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+
+.feature__text {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.feature__date {
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+/*-------------------------------------------
 ITEM
 -------------------------------------------*/
 .main__item {
@@ -428,6 +492,24 @@ COMPANY
     height: 100vh;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  /*-------------------------------------------
+  Pickup
+  -------------------------------------------*/
+  .pickup {
+    padding: 80px 0;
+  }
+  .pickup__list li {
+    padding: 0 20px;
+  }
+  /*-------------------------------------------
+  Feature
+  -------------------------------------------*/
+  .feature {
+    padding: 80px 16px;
+  }
+  .feature__content {
+    padding: 16px;
   }
   /*-------------------------------------------
   ITEM

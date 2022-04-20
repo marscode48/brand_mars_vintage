@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 class Main {
   constructor() {
     this._init();
-    // this._scrollInit();
+    this._scrollInit();
   }
 
   _init() {
@@ -32,15 +32,15 @@ class Main {
     new HeroSlider('.swiper');
   }
 
-  // _inviewAnimation(el, inview) {
-  //   console.log(el)
-  //   console.log(inview)
-  //   if(inview) {
-  //     el.classList.add('inview');
-  //   }
-  // }
+  _inviewAnimation(el, inview) {
+    console.log(el)
+    console.log(inview)
+    if(inview) {
+      el.classList.add('inview');
+    }
+  }
 
-  // _scrollInit() {
-  //   new ScrollObserver('.feature__img', this._inviewAnimation);
-  // }
+  _scrollInit() {
+    new ScrollObserver('.feature__img', this._inviewAnimation);
+  }
 }
