@@ -1,21 +1,3 @@
-/*=================================================
-JavaScript
-===================================================*/
-const btn = document.querySelector('.toggle-btn');
-const header = document.querySelector('.header')
-const mask = document.querySelector('#mask')
-
-// ハンバーガーメニュー
-btn.addEventListener('click', function() {
-  header.classList.toggle('open')
-});
-
-// 画面をクリックしたら閉じる
-mask.addEventListener('click', function() {
-  header.classList.remove('open')
-});
-
-// ここから記述
 document.addEventListener('DOMContentLoaded', function () {
   const main = new Main();
 });
@@ -27,7 +9,7 @@ class Main {
   }
 
   _init() {
-    // new MenuOpen();
+    new MenuOpen();
     // new SmoothScroll(80);
     new HeroSlider('.swiper');
   }
