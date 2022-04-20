@@ -10,18 +10,13 @@ html {
 }
 body {
   font-family: 'Crimson Text', serif;
-  font-size: 100%;
   color: $cBlack;
-  min-height: 100vh;
-  position: relative;
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 a {
   color: $cBlack;
   text-decoration: none;
-  transition: all 0.5s;
-}
-a:hover {
-  opacity: 0.7;
 }
 img {
   max-width: 100%;
@@ -30,27 +25,21 @@ li {
   list-style: none;
 }
 
+
 /* 共通クラス */
-.wrapper {
-  width: 100%;
-  margin: 0 auto;
-  max-width: $contentMaxWidth;
-  padding: 0 40px;
-}
-.content {
-  padding-top: 120px;
-  padding-bottom: 160px;
-}
-.site-title a {
+.site-title {
   line-height: 1px;
-  width: 180px;
-  display: block;
+  
+  & a {
+    display: block;
+  }
 }
-.page-title {
-  font-size: 0.875rem;
-  font-weight: normal;
+.sec-title {
+  font-size: 2.25rem;
   margin-bottom: 30px;
+  text-align: center;
 }
+
 
 /* アイコン */
 .icon {
@@ -81,49 +70,7 @@ li {
     }
   }
 }
-// .font-sm {
-//   font-size: 14px;
-// }
-// .font-md {
-//   font-size: 17px;
-// }
-// .font-lr {
-//   font-size: 17px;
-// }
-// .font-lg {
-//   font-size: 25px;
-// }
-// .mb-sm {
-//   margin-bottom: 16px !important;
-// }
-// .mb-lg {
-//   margin-bottom: 80px !important;
-// }
-// .pb-sm {
-//   padding-bottom: 16px !important;
-// }
-// .pb-lg {
-//   padding-bottom: 80px !important;
-// }
-// .content-width {
-//   width: 90%;
-//   margin: 0 auto;
-//   max-width: $contentMaxWidth;
-// }
-// .main-title {
-//   @extend .font-lg;
-//   font-weight: 600;
-//   margin-bottom: 0;
-//   display: block;
-// }
-// .sub-title {
-//   @extend .font-sm;
-//   color: $cSubTitle;
-// }
-// .flex {
-//   display: flex;
-//   flex-direction: column;
-// }
+
   
 
 .header {
@@ -182,7 +129,7 @@ li {
   &__btn {
     display: block;
     position: fixed;
-    top: 25px;
+    top: 20px;
     right: 45px;
     width: 30px;
     height: 30px;
