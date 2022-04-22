@@ -10,6 +10,12 @@
   ヘッダー
   -------------------------------------------*/
   .header {
+    &.triggered {
+      & .header__sns {
+        bottom: 0px;
+      }
+    }
+
     &__navi {
       position: fixed;
       top: 0;
@@ -27,18 +33,42 @@
         transform: translateX(280px);
         opacity: 1;
       }
+
+      .mobile-logo {
+        display: block;
+        padding: 20px 20px 20px 0;
+      }
     }
   
     &__menu {
       display: block;
       margin-bottom: 60px;
-      border-top: solid 1px $cBlack;
+      perspective: 2000px;
+      transform-style: preserve-3d;
   
       & li {
         position: relative;
         margin: 0;
         padding: 25px 0;
-        border-bottom: solid 1px $cBlack;
+        border-top: solid 1px $cBlack;
+        transform: translate3d(0, 0, -1000px);
+        transition: transform .5s, opacity .5s;
+        opacity: 0;
+
+        &:last-child {
+          border-bottom: solid 1px $cBlack;
+        }
+
+        .open & {
+          transform: none;
+          opacity: 1;
+
+          @for $i from 1 through 7 {
+            &:nth-child(#{$i}) {
+                transition-delay: $i * 0.1s;
+            }
+          }
+        }
       }
     }
   
@@ -46,7 +76,8 @@
       flex-direction: column;
       position: relative;
       font-size: 0.9rem;
-      // bottom: 0;
+      opacity: 1;
+      bottom: 0;
 
       & li {
         margin-left: 1.25em;
