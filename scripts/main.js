@@ -29,10 +29,18 @@ class Main {
     } else {
         this.header.classList.add('triggered');
     }
-}
+  }
+
+  _textAnimation(el, inview) {
+    if(inview) {
+      const ta = new TweenTextAnimation(el);
+      ta.animate();
+    }
+  }
 
   _scrollInit() {
     new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {once: false});
     new ScrollObserver('.feature__img', this._inviewAnimation);
+    new ScrollObserver('.tween-animate-title', this._textAnimation, {rootMargin: "-100px 0px"});
   }
 }
