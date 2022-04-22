@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 class Main {
   constructor() {
+    this.header = document.querySelector('.header');
     this._init();
     this._scrollInit();
   }
@@ -22,7 +23,16 @@ class Main {
     }
   }
 
+  _navAnimation(el, inview) {
+    if(inview) {
+        this.header.classList.remove('triggered');
+    } else {
+        this.header.classList.add('triggered');
+    }
+}
+
   _scrollInit() {
+    new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {once: false});
     new ScrollObserver('.feature__img', this._inviewAnimation);
   }
 }
