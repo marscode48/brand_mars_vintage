@@ -555,15 +555,15 @@ Arrival
 }
 
 /*-------------------------------------------
-Feature
+Products
 -------------------------------------------*/
-.feature {
+.products {
   max-width: 1240px;
   padding: 100px 16px 50px 16px;
   margin: -50px auto 10px auto;
 }
 
-.feature__grid {
+.products__grid {
   display: -ms-grid;
   display: grid;
   gap: 26px;
@@ -571,14 +571,14 @@ Feature
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.feature__item {
+.products__item {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-box-shadow: 0 0 8px 4px #ccc;
           box-shadow: 0 0 8px 4px #ccc;
 }
 
-.feature__img {
+.products__img {
   vertical-align: top;
   /* 
     jQueryでフェード表示させる時はコメントアウトする 
@@ -593,27 +593,27 @@ Feature
     */
 }
 
-.feature__img.inview {
+.products__img.inview {
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
 
-.feature__content {
+.products__content {
   padding: 30px;
 }
 
-.feature__category {
+.products__category {
   font-size: 0.75rem;
   margin-bottom: 20px;
 }
 
-.feature__text {
+.products__text {
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.feature__date {
+.products__date {
   font-size: 0.75rem;
   text-align: right;
 }
@@ -984,12 +984,12 @@ Footer
     padding: 0 20px;
   }
   /*-------------------------------------------
-  Feature
+  Products
   -------------------------------------------*/
-  .feature {
+  .products {
     padding: 80px 16px;
   }
-  .feature__content {
+  .products__content {
     padding: 16px;
   }
   /*-------------------------------------------
