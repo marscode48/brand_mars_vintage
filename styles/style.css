@@ -530,23 +530,27 @@ TOP、PRODUCTS
 /*-------------------------------------------
 Video
 -------------------------------------------*/
+.video {
+  padding-top: 80px;
+}
+
 .video__bg {
   width: 100%;
 }
 
 /*-------------------------------------------
-Pickup
+Arrival
 -------------------------------------------*/
-.pickup {
+.arrival {
   width: 100%;
   padding: 100px 0 50px 0;
 }
 
-.pickup__list {
+.arrival__list {
   font-size: 0;
 }
 
-.pickup__list li {
+.arrival__list li {
   padding: 0 30px;
 }
 
@@ -971,12 +975,12 @@ Footer
        object-fit: cover;
   }
   /*-------------------------------------------
-  Pickup
+  Arrival
   -------------------------------------------*/
-  .pickup {
+  .arrival {
     padding: 80px 0;
   }
-  .pickup__list li {
+  .arrival__list li {
     padding: 0 20px;
   }
   /*-------------------------------------------
