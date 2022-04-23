@@ -10,12 +10,6 @@
   ヘッダー
   -------------------------------------------*/
   .header {
-    &.triggered {
-      & .header__sns {
-        bottom: 0px;
-      }
-    }
-
     &__navi {
       position: fixed;
       top: 0;
@@ -38,55 +32,57 @@
         display: block;
         padding: 20px 20px 20px 0;
       }
-    }
+
+      .mobile-menu {
+        display: block;
+        margin-bottom: 60px;
+        perspective: 2000px;
+        transform-style: preserve-3d;
+
+        & li {
+          position: relative;
+          margin: 0;
+          padding: 25px 0;
+          border-top: solid 1px $cBlack;
+          transform: translate3d(0, 0, -1000px);
+          transition: transform .5s, opacity .5s;
+          opacity: 0;
   
-    &__menu {
-      display: block;
-      margin-bottom: 60px;
-      perspective: 2000px;
-      transform-style: preserve-3d;
+          &:last-child {
+            border-bottom: solid 1px $cBlack;
+          }
   
-      & li {
-        position: relative;
-        margin: 0;
-        padding: 25px 0;
-        border-top: solid 1px $cBlack;
-        transform: translate3d(0, 0, -1000px);
-        transition: transform .5s, opacity .5s;
-        opacity: 0;
-
-        &:last-child {
-          border-bottom: solid 1px $cBlack;
-        }
-
-        .open & {
-          transform: none;
-          opacity: 1;
-
-          @for $i from 1 through 7 {
-            &:nth-child(#{$i}) {
-                transition-delay: $i * 0.1s;
+          .open & {
+            transform: none;
+            opacity: 1;
+  
+            @for $i from 1 through 7 {
+              &:nth-child(#{$i}) {
+                  transition-delay: $i * 0.1s;
+              }
             }
           }
         }
       }
+
+      .mobile-sns {
+        display: block;
+        position: relative;
+        font-size: 0.9rem;
+  
+        & li {
+          margin-left: 1.25em;
+          padding: 10px 0;
+        }
+  
+        & .icon::before {
+          left: -1.25em;
+        }
+      }
     }
   
-    &__sns {
-      flex-direction: column;
-      position: relative;
-      font-size: 0.9rem;
-      opacity: 1;
-      bottom: 0;
-
-      & li {
-        margin-left: 1.25em;
-        padding: 10px 0;
-      }
-
-      & .icon::before {
-        left: -1.25em;
-      }
+    &__menu, &__sns {
+      display: none;
     }
   
     &__btn {

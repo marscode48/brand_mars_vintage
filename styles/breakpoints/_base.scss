@@ -81,14 +81,15 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 0px 40px;
   position: fixed;
   z-index: 10;
   background-color: $cWhite;
+  height: 80px;
 
   &.triggered {
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.8);
 
     & .header__sns {
       bottom: -25px;
@@ -100,7 +101,7 @@ li {
     display: block;
     position: relative;
 
-    & .mobile-logo {
+    .mobile-logo, .mobile-menu, .mobile-sns {
       display: none;
     }
   }
@@ -129,7 +130,6 @@ li {
     }
   }
 
-
   &__btn {
     display: none;
   }
@@ -138,11 +138,6 @@ li {
 #mask {
   display: none;
 }
-
-
-
-
-
 
 
 /*-------------------------------------------
