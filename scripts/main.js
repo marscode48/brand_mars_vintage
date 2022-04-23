@@ -12,7 +12,7 @@ class Main {
   _init() {
     new MenuOpen();
     // new SmoothScroll(80);
-    new HeroSlider('.swiper');
+    this.hero = new HeroSlider('.swiper');
   }
 
   _inviewAnimation(el, inview) {
@@ -38,10 +38,19 @@ class Main {
     }
   }
 
+  _toggleSlideAnimation(el, inview) {
+    if(inview) {
+        this.hero.start();
+    } else {
+        this.hero.stop();
+    }
+  }
+
   _scrollInit() {
     new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {once: false});
     new ScrollObserver('.products__img', this._inviewAnimation);
     new ScrollObserver('.appear', this._inviewAnimation);
     new ScrollObserver('.tween-animate-title', this._textAnimation, {rootMargin: "-100px 0px"});
+    new ScrollObserver('.swiper', this._toggleSlideAnimation.bind(this), {once: false});
   }
 }

@@ -7,19 +7,31 @@ class HeroSlider {
 
   _initSwiper () {
     return new Swiper(this.el, {
-      initialSlide: 3.5,
-      slidesPerView: 1.3,
-      spaceBetween: 20,
-      centeredSlides: true,
+      loop: true,
       grabCursor: true,
+      effect: "coverflow",
+      centeredSlides: true,
+      slidesPerView: 1.5,
+      speed: 1000,
       
       breakpoints: {
         900: {
-          slidesPerView: 4,
-          spaceBetween: 30,
-          centeredSlides: true,
+          slidesPerView: 2,
         }
       },
     });
+  }
+
+  start(options = {delay: 3000}) {
+    options = Object.assign({
+      delay: 4000,
+      disableOnInteraction: false
+    }, options);
+    
+    this.swiper.params.autoplay = options;
+    this.swiper.autoplay.start();
+  }
+  stop() {
+      this.swiper.autoplay.stop();
   }
 }
