@@ -48,6 +48,7 @@ class Main {
 
   _scrollInit() {
     new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), {once: false});
+    new ScrollObserver('.cover-slide', this._inviewAnimation);
     new ScrollObserver('.products__img', this._inviewAnimation);
     new ScrollObserver('.appear', this._inviewAnimation);
     new ScrollObserver('.tween-animate-title', this._textAnimation, {rootMargin: "-100px 0px"});
