@@ -218,8 +218,8 @@ Products
 
 .products {
   max-width: 1240px;
-  padding: 100px 16px 50px 16px;
-  margin: -50px auto 10px auto;
+  padding: 50px 16px;
+  margin: 0 auto;
 
   &__grid {
     display: grid;
@@ -252,6 +252,11 @@ Products
   &__date {
     font-size: 0.75rem;
     text-align: right;
+  }
+
+  &__btn {
+    text-align: center;
+    margin: 50px 0;
   }
 }
 
