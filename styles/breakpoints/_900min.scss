@@ -205,8 +205,22 @@
   -------------------------------------------*/
   .footer {
     flex-direction: column;
+    align-items: center;
 
-    &__menu {
-      margin-bottom: 5px;
+    &__logo {
+      margin: 0 auto;
+    }
+
+    &__nav {
+      padding: 20px 0;
+    }
+
+    &__ul {
+      flex-direction: column;
+      align-items: center;
+
+      & li {
+        margin: 10px 0;
+      }
     }
   }

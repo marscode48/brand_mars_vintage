@@ -218,60 +218,24 @@ Products
 Footer
 -------------------------------------------*/
 .footer {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 60px 0;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  border-top: solid 1px $cWhite;
-  font-size: 0.75rem;
-  padding: 80px 30px;
-  text-align: left;
-
+  
   &__logo {
-    margin-bottom: 15px;
-
-    & a {
-      display: block;
-      height: 30px;
-      
-      & img {
-        width: 30px;
-      }
-
-      & span {
-        font-size: 1.25rem;
-        line-height: 30px;
-      }
-    }
+    @extend .site-title
   }
-
-  &__ask {
-    & p {
-      line-height: 1.6;
-    }
-  }
-
-  &__sns {
+  
+  &__ul {
     display: flex;
-    align-items: center;
-    margin-top: 30px;
+    font-size: 0.75rem;
 
     & li {
-      & a {
-        padding: 0 15px;
-      }
-    }
-
-    & .icon::before {
-      left: 0;
-    }
-  }
-
-  &__copyright {
-    display: flex;
-    align-items: center;
-
-    & li:last-child {
-      margin-left: 15px;
+      margin: 10px 30px 0 0;
     }
   }
 }
