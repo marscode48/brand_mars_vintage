@@ -798,20 +798,25 @@ li {
 -------------------------------------------*/
 .header {
   width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.header__inner {
+  height: 80px;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-width: 1240px;
+  margin: 0 auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0px 40px;
-  position: fixed;
-  z-index: 10;
-  background-color: #fff;
-  height: 80px;
 }
 
 .header.triggered {
@@ -825,22 +830,22 @@ li {
   opacity: 1;
 }
 
-.header__navi {
+.header__nav {
   display: block;
   position: relative;
 }
 
-.header__navi .mobile-logo, .header__navi .mobile-menu, .header__navi .mobile-sns {
+.header__nav .mobile-logo, .header__nav .mobile-ul, .header__nav .mobile-sns {
   display: none;
 }
 
-.header__menu {
+.header__ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.header__menu li {
+.header__ul li {
   margin-left: 20px;
   line-height: 1;
 }
@@ -987,7 +992,7 @@ Footer
   /*-------------------------------------------
   ヘッダー
   -------------------------------------------*/
-  .header__navi {
+  .header__nav {
     position: fixed;
     top: 0;
     left: -280px;
@@ -1001,16 +1006,16 @@ Footer
     z-index: 20;
     opacity: 0;
   }
-  .open .header__navi {
+  .open .header__nav {
     -webkit-transform: translateX(280px);
             transform: translateX(280px);
     opacity: 1;
   }
-  .header__navi .mobile-logo {
+  .header__nav .mobile-logo {
     display: block;
     padding: 20px 20px 20px 0;
   }
-  .header__navi .mobile-menu {
+  .header__nav .mobile-ul {
     display: block;
     margin-bottom: 60px;
     -webkit-perspective: 2000px;
@@ -1018,7 +1023,7 @@ Footer
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
   }
-  .header__navi .mobile-menu li {
+  .header__nav .mobile-ul li {
     position: relative;
     margin: 0;
     padding: 25px 0;
@@ -1031,55 +1036,55 @@ Footer
     transition: transform .5s, opacity .5s, -webkit-transform .5s;
     opacity: 0;
   }
-  .header__navi .mobile-menu li:last-child {
+  .header__nav .mobile-ul li:last-child {
     border-bottom: solid 1px black;
   }
-  .open .header__navi .mobile-menu li {
+  .open .header__nav .mobile-ul li {
     -webkit-transform: none;
             transform: none;
     opacity: 1;
   }
-  .open .header__navi .mobile-menu li:nth-child(1) {
+  .open .header__nav .mobile-ul li:nth-child(1) {
     -webkit-transition-delay: 0.1s;
             transition-delay: 0.1s;
   }
-  .open .header__navi .mobile-menu li:nth-child(2) {
+  .open .header__nav .mobile-ul li:nth-child(2) {
     -webkit-transition-delay: 0.2s;
             transition-delay: 0.2s;
   }
-  .open .header__navi .mobile-menu li:nth-child(3) {
+  .open .header__nav .mobile-ul li:nth-child(3) {
     -webkit-transition-delay: 0.3s;
             transition-delay: 0.3s;
   }
-  .open .header__navi .mobile-menu li:nth-child(4) {
+  .open .header__nav .mobile-ul li:nth-child(4) {
     -webkit-transition-delay: 0.4s;
             transition-delay: 0.4s;
   }
-  .open .header__navi .mobile-menu li:nth-child(5) {
+  .open .header__nav .mobile-ul li:nth-child(5) {
     -webkit-transition-delay: 0.5s;
             transition-delay: 0.5s;
   }
-  .open .header__navi .mobile-menu li:nth-child(6) {
+  .open .header__nav .mobile-ul li:nth-child(6) {
     -webkit-transition-delay: 0.6s;
             transition-delay: 0.6s;
   }
-  .open .header__navi .mobile-menu li:nth-child(7) {
+  .open .header__nav .mobile-ul li:nth-child(7) {
     -webkit-transition-delay: 0.7s;
             transition-delay: 0.7s;
   }
-  .header__navi .mobile-sns {
+  .header__nav .mobile-sns {
     display: block;
     position: relative;
     font-size: 0.9rem;
   }
-  .header__navi .mobile-sns li {
+  .header__nav .mobile-sns li {
     margin-left: 1.25em;
     padding: 10px 0;
   }
-  .header__navi .mobile-sns .icon::before {
+  .header__nav .mobile-sns .icon::before {
     left: -1.25em;
   }
-  .header__menu, .header__sns {
+  .header__ul, .header__sns {
     display: none;
   }
   .header__btn {

@@ -78,14 +78,19 @@ li {
 -------------------------------------------*/
 .header {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 40px;
   position: fixed;
   z-index: 10;
   background-color: $cWhite;
-  height: 80px;
+
+  &__inner {
+    height: 80px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: 0 auto;
+    align-items: center;
+  }
 
   &.triggered {
     background-color: rgba(255, 255, 255, 0.9);
@@ -97,16 +102,16 @@ li {
     }
   }
 
-  &__navi {
+  &__nav {
     display: block;
     position: relative;
 
-    .mobile-logo, .mobile-menu, .mobile-sns {
+    .mobile-logo, .mobile-ul, .mobile-sns {
       display: none;
     }
   }
 
-  &__menu {
+  &__ul {
     display: flex;
 
     & li {

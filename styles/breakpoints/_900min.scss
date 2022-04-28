@@ -10,7 +10,7 @@
   ヘッダー
   -------------------------------------------*/
   .header {
-    &__navi {
+    &__nav {
       position: fixed;
       top: 0;
       left: -280px;
@@ -33,7 +33,7 @@
         padding: 20px 20px 20px 0;
       }
 
-      .mobile-menu {
+      .mobile-ul {
         display: block;
         margin-bottom: 60px;
         perspective: 2000px;
@@ -81,7 +81,7 @@
       }
     }
   
-    &__menu, &__sns {
+    &__ul, &__sns {
       display: none;
     }
   
