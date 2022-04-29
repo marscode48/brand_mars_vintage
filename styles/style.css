@@ -513,6 +513,90 @@
   }
 }
 
+.fade-slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: calc(100vh - 80px);
+  -webkit-animation-name: kf-fade-slide;
+          animation-name: kf-fade-slide;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.fade-slide:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.fade-slide:nth-child(2) {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.fade-slide:nth-child(3) {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+.fade-slide:nth-child(4) {
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+}
+
+.fade-slide:nth-child(5) {
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
+}
+
+@-webkit-keyframes kf-fade-slide {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes kf-fade-slide {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .cover-slide {
   position: relative;
   overflow: hidden;
@@ -877,14 +961,14 @@ li {
 }
 
 /*-------------------------------------------
-Video
+メインビジュアル
 -------------------------------------------*/
-.video {
+.mainvisual {
   padding-top: 80px;
-}
-
-.video__bg {
+  position: relative;
   width: 100%;
+  max-width: 100%;
+  height: 100vh;
 }
 
 /*-------------------------------------------
