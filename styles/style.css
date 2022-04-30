@@ -918,6 +918,10 @@ li {
   opacity: 1;
 }
 
+.header.triggered .header__sns li a {
+  pointer-events: auto;
+}
+
 .header__nav {
   display: block;
   position: relative;
@@ -954,6 +958,10 @@ li {
 .header__sns li {
   margin-left: 30px;
   line-height: 1;
+}
+
+.header__sns li a {
+  pointer-events: none;
 }
 
 .header__btn {
@@ -1192,7 +1200,7 @@ Footer
     left: 0;
     width: 30px;
     height: 2px;
-    background-color: #333;
+    background-color: black;
     border-radius: 4px;
     -webkit-transition: all .5s;
     transition: all .5s;
