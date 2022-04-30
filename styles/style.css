@@ -845,6 +845,10 @@ li {
   text-align: center;
 }
 
+.main {
+  padding-top: 80px;
+}
+
 /* アイコン */
 .icon {
   position: relative;
@@ -964,7 +968,6 @@ li {
 メインビジュアル
 -------------------------------------------*/
 .mainvisual {
-  padding-top: 80px;
   position: relative;
   width: 100%;
   max-width: 100%;
