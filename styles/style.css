@@ -1048,6 +1048,32 @@ Products
   margin: 50px 0;
 }
 
+.products__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px 0;
+}
+
+.products__pagination li {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 1.25rem;
+  border: 1px solid black;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.products__pagination .current {
+  background-color: black;
+  color: #fff;
+}
+
 /*-------------------------------------------
 Footer
 -------------------------------------------*/
