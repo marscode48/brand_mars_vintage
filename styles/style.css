@@ -830,6 +830,12 @@ li {
 }
 
 /* 共通クラス */
+.wrapper, .header__inner, .products, .footer {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
 .site-title, .footer__logo {
   line-height: 1px;
   width: 200px;
@@ -893,15 +899,12 @@ li {
 
 .header__inner {
   height: 80px;
-  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 1240px;
-  margin: 0 auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1002,9 +1005,7 @@ Arrival
 Products
 -------------------------------------------*/
 .products {
-  max-width: 1240px;
   padding: 50px 16px;
-  margin: 0 auto;
 }
 
 .products__grid {
@@ -1075,12 +1076,52 @@ Products
 }
 
 /*-------------------------------------------
+ITEM
+-------------------------------------------*/
+.main__item {
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.main__img {
+  width: 50%;
+}
+
+.main__text {
+  width: 42%;
+}
+
+.main__text p {
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.main__item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main__item-info dt {
+  width: 30%;
+}
+
+.main__item-info dd {
+  width: 70%;
+}
+
+/*-------------------------------------------
 Footer
 -------------------------------------------*/
 .footer {
-  width: 90%;
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 60px 0;
   display: -webkit-box;
   display: -ms-flexbox;

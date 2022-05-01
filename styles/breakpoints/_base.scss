@@ -27,6 +27,11 @@ li {
 
 
 /* 共通クラス */
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
 .site-title {
   line-height: 1px;
   width: 200px;
@@ -86,12 +91,10 @@ li {
   background-color: $cWhite;
 
   &__inner {
+    @extend .wrapper;
     height: $navHeight;
-    width: 90%;
     display: flex;
     justify-content: space-between;
-    max-width: 1240px;
-    margin: 0 auto;
     align-items: center;
   }
 
@@ -186,9 +189,8 @@ Products
 -------------------------------------------*/
 
 .products {
-  max-width: 1240px;
+  @extend .wrapper;
   padding: 50px 16px;
-  margin: 0 auto;
 
   &__grid {
     display: grid;
@@ -252,12 +254,49 @@ Products
 }
 
 /*-------------------------------------------
+ITEM
+-------------------------------------------*/
+.main {
+
+  &__item {
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  &__img {
+    width: 50%;
+  }
+
+  &__text {
+    width: 42%;
+
+    & p {
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+  }
+
+  &__item-info {
+    display: flex;
+    flex-wrap: wrap;
+
+    & dt {
+      width: 30%;
+    }
+    
+    & dd {
+      width: 70%;
+    }
+  }
+}
+
+/*-------------------------------------------
 Footer
 -------------------------------------------*/
 .footer {
-  width: 90%;
-  max-width: 1240px;
-  margin: 0 auto;
+  @extend .wrapper;
   padding: 60px 0;
   display: flex;
   align-items: flex-end;
