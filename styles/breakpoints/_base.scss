@@ -45,6 +45,11 @@ li {
   margin-bottom: 30px;
   text-align: center;
 }
+.page-title {
+  @extend .sec-title;
+  font-weight: normal;
+  text-align: left;
+}
 .main {
   padding-top: $navHeight;
 }
@@ -254,19 +259,24 @@ Products
 }
 
 /*-------------------------------------------
-ITEM
+Article
 -------------------------------------------*/
-.main {
+.article {
+  @extend .wrapper;
 
-  &__item {
-    max-width: 800px;
+  &__inner {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 60px;
+    padding: 60px 0 100px;
   }
 
   &__img {
     width: 50%;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   &__text {
@@ -278,7 +288,7 @@ ITEM
     }
   }
 
-  &__item-info {
+  &__dl {
     display: flex;
     flex-wrap: wrap;
 
@@ -289,6 +299,10 @@ ITEM
     & dd {
       width: 70%;
     }
+  }
+
+  &__btn {
+    text-align: center;
   }
 }
 

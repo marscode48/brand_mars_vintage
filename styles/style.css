@@ -830,7 +830,7 @@ li {
 }
 
 /* 共通クラス */
-.wrapper, .header__inner, .products, .footer {
+.wrapper, .header__inner, .products, .article, .footer {
   width: 90%;
   margin: 0 auto;
   max-width: 1240px;
@@ -845,10 +845,15 @@ li {
   display: block;
 }
 
-.sec-title {
+.sec-title, .page-title {
   font-size: 2.25rem;
   margin-bottom: 30px;
   text-align: center;
+}
+
+.page-title {
+  font-weight: normal;
+  text-align: left;
 }
 
 .main {
@@ -1076,33 +1081,38 @@ Products
 }
 
 /*-------------------------------------------
-ITEM
+Article
 -------------------------------------------*/
-.main__item {
-  max-width: 800px;
+.article__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 60px;
+  padding: 60px 0 100px;
 }
 
-.main__img {
+.article__img {
   width: 50%;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
-.main__text {
+.article__img:hover {
+  opacity: 0.6;
+}
+
+.article__text {
   width: 42%;
 }
 
-.main__text p {
+.article__text p {
   margin-bottom: 30px;
   text-align: justify;
 }
 
-.main__item-info {
+.article__dl {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1110,12 +1120,16 @@ ITEM
       flex-wrap: wrap;
 }
 
-.main__item-info dt {
+.article__dl dt {
   width: 30%;
 }
 
-.main__item-info dd {
+.article__dl dd {
   width: 70%;
+}
+
+.article__btn {
+  text-align: center;
 }
 
 /*-------------------------------------------
@@ -1313,21 +1327,6 @@ Footer
     cursor: pointer;
   }
   /*-------------------------------------------
-  TOP、PRODUCTS
-  -------------------------------------------*/
-  .main__product-list li {
-    width: 47%;
-  }
-  /*-------------------------------------------
-  Video
-  -------------------------------------------*/
-  .video__bg {
-    width: 100%;
-    height: calc(100vh - 80px);
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  /*-------------------------------------------
   Arrival
   -------------------------------------------*/
   .arrival {
@@ -1351,6 +1350,25 @@ Footer
   .products__btn {
     text-align: center;
     margin: 30px 0;
+  }
+  /*-------------------------------------------
+  Article
+  -------------------------------------------*/
+  .article__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .article__img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .article__text {
+    width: 100%;
+  }
+  .article__text .page-title {
+    font-size: 1.5rem;
   }
   /*-------------------------------------------
   フッター
