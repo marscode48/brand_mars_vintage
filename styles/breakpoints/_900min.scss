@@ -205,9 +205,9 @@
   }
 
   /*-------------------------------------------
-  About
+  About, Company
   -------------------------------------------*/
-  .about {
+  .about, .company {
     &__inner {
       flex-direction: column;
     }
@@ -222,11 +222,17 @@
       padding: 0%;
 
       .page-title {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+        text-align: center;
 
         &::before {
           display: none;
         }
+      }
+
+      .ja {
+        display: block;
+        text-align: center;
       }
     }
   }
