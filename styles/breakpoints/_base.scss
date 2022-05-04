@@ -32,6 +32,11 @@ li {
   margin: 0 auto;
   max-width: $contentMaxWidth;
 }
+.inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0 100px;
+}
 .site-title {
   line-height: 1px;
   width: 200px;
@@ -265,9 +270,7 @@ Article
   @extend .wrapper;
 
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    padding: 60px 0 100px;
+    @extend .inner;
   }
 
   &__img {
@@ -303,6 +306,64 @@ Article
 
   &__btn {
     text-align: center;
+  }
+}
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+.about {
+  @extend .wrapper;
+
+  &__inner {
+    @extend .inner;
+  }
+
+  &__img {
+    width: 50%;
+
+    img {
+      vertical-align: bottom;
+    }
+  }
+
+  &__text {
+    width: 50%;
+    padding: 0 8%;
+
+    & .page-title {
+      position: relative;
+      margin-bottom: 0;
+
+      @include p-base(
+        $display: block,
+        $width: 100px,
+        $height: 1px,
+        $top: 50%,
+        $left: -120px
+      ) {
+        background-color: $cBlack;
+        transform: translateY(-50%) scaleX(0);
+        transition: transform 0.3s ease 1s;
+        transform-origin: right;
+      }
+    }
+
+    & .ja {
+      display: inline-block;
+      margin-bottom: 25px;
+    }
+
+    & p {
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+
+    &.inview {
+      & .page-title::before {
+        transform: translateY(-50%);
+      }
+    }
   }
 }
 

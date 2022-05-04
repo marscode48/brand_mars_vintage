@@ -830,10 +830,20 @@ li {
 }
 
 /* 共通クラス */
-.wrapper, .header__inner, .products, .article, .footer {
+.wrapper, .header__inner, .products, .article, .about, .footer {
   width: 90%;
   margin: 0 auto;
   max-width: 1240px;
+}
+
+.inner, .article__inner, .about__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 60px 0 100px;
 }
 
 .site-title, .footer__logo {
@@ -1083,16 +1093,6 @@ Products
 /*-------------------------------------------
 Article
 -------------------------------------------*/
-.article__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 60px 0 100px;
-}
-
 .article__img {
   width: 50%;
   -webkit-transition: opacity 0.3s;
@@ -1130,6 +1130,61 @@ Article
 
 .article__btn {
   text-align: center;
+}
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+.about__img {
+  width: 50%;
+}
+
+.about__img img {
+  vertical-align: bottom;
+}
+
+.about__text {
+  width: 50%;
+  padding: 0 8%;
+}
+
+.about__text .page-title {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.about__text .page-title::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -120px;
+  width: 100px;
+  height: 1px;
+  background-color: black;
+  -webkit-transform: translateY(-50%) scaleX(0);
+          transform: translateY(-50%) scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s ease 1s;
+  transition: -webkit-transform 0.3s ease 1s;
+  transition: transform 0.3s ease 1s;
+  transition: transform 0.3s ease 1s, -webkit-transform 0.3s ease 1s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.about__text .ja {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.about__text p {
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.about__text.inview .page-title::before {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 /*-------------------------------------------
@@ -1369,6 +1424,29 @@ Footer
   }
   .article__text .page-title {
     font-size: 1.5rem;
+  }
+  /*-------------------------------------------
+  About
+  -------------------------------------------*/
+  .about__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about__img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .about__text {
+    width: 100%;
+    padding: 0%;
+  }
+  .about__text .page-title {
+    font-size: 1.5rem;
+  }
+  .about__text .page-title::before {
+    display: none;
   }
   /*-------------------------------------------
   フッター
