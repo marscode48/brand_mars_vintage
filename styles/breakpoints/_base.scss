@@ -113,7 +113,7 @@ li {
     box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.8);
 
     & .header__sns {
-      bottom: -25px;
+      transform: translateY(-25px);
       opacity: 1;
 
       & li a {

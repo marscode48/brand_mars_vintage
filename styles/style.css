@@ -932,7 +932,8 @@ li {
 }
 
 .header.triggered .header__sns {
-  bottom: -25px;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
   opacity: 1;
 }
 
